@@ -1,4 +1,4 @@
-package models;
+ package models;
 
 import java.util.List;
 
@@ -19,12 +19,7 @@ public class BlogPost extends Model {
 
 	@Id
 	public Long id;
-
-	@Column(length = 255, nullable = false)
-	@NotNull
-	@Size(max = 255)
-	public String subject;
-
+	
 	@Column(columnDefinition = "TEXT")
 	@NotNull
 	public String content;

@@ -1,8 +1,11 @@
-package models;
+package models.payload;
 
-public class Listing {
+import models.PropType;
+import models.SaleType;
+
+public class ListingVO {
 	
-	private Address address;
+	private AddressVO address;
 	private double price;
 	private double bedrooms;
 	private int landSqFt;
@@ -14,10 +17,10 @@ public class Listing {
 	private boolean basementFinished;
 	private PropType propType;
 	
-	public Address getAddress() {
+	public AddressVO getAddress() {
 		return address;
 	}
-	public void setAddress(Address address) {
+	public void setAddress(AddressVO address) {
 		this.address = address;
 	}
 	public double getPrice() {

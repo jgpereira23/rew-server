@@ -1,6 +1,6 @@
-package models;
+package models.payload;
 
-public class Address {
+public class AddressVO {
 	
 	private String streetNum;
 	private String streetName;

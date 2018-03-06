@@ -6,7 +6,7 @@
 GET		/listings/active           	controllers.ListingController.retrieveActiveListings 
 POST 	/listings/upsert			controllers.ListingController.upsertListing 
 DELETE	/listings/remove			controllers.ListingController.removeListing 
-GET 	/listings/retrieve			controllers.ListingController.retriveListing
+GET 	/listings/retrieve			controllers.ListingController.retrieveListing
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
