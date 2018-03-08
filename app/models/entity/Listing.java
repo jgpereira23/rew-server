@@ -113,5 +113,9 @@ public class Listing extends Model {
 	public static List<Listing> findAllActiveListings() {
 		return find.where().eq("is_active", true).findList();
 	}
+	
+	public static Listing findByID(Long id){
+		return find.byId(id);
+	}
 
 }

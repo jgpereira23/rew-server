@@ -7,9 +7,11 @@ import models.payload.AddressVO;
 import models.payload.ListingVO;
 
 public class ConversionUtil {
+	//convert a listing into a listingVO
 	public static ListingVO toListingVO(Listing listing){
 		ListingVO listingVO = new ListingVO();
-    	AddressVO address = new AddressVO();
+    	//1 to 1 transfer values to the listingVO
+		AddressVO address = new AddressVO();
     	address.setAptNum(listing.apt_number);
     	address.setCity(listing.city);
     	address.setState(listing.state);
@@ -17,6 +19,7 @@ public class ConversionUtil {
     	address.setStreetNum(String.valueOf(listing.street_number));
     	address.setStreetType(listing.street_type);
     	address.setZip(String.valueOf(listing.zip_code));
+    	
     	listingVO.setAddress(address);
     	listingVO.setBasementFinished(listing.is_active);
     	listingVO.setBathrooms(listing.bathrooms);
@@ -29,6 +32,7 @@ public class ConversionUtil {
     	listingVO.setSaleType(SaleType.valueOf(listing.sale_type));
     	listingVO.setYrBuilt(listing.year_built);
 		listingVO.setAddress(address);
+		
 		return listingVO;
 	}
 }
