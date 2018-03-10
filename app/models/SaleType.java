@@ -2,7 +2,7 @@ package models;
 
 public enum SaleType {
 	BY_OWNER ("By owner"),
-	BANK_OWNED_FORECLOSURE ("Bank-owned foreclore");
+	BANK_OWNED_FORECLOSURE ("Bank-owned foreclosure");
 	
 	private final String name;       
 
