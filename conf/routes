@@ -4,14 +4,15 @@
 
 # An example controller showing a sample home page
 GET		/listings/active           	controllers.ListingController.retrieveActiveListings 
-POST 	/listings/upsert			controllers.ListingController.upsertListing 
-DELETE	/listings/remove			controllers.ListingController.removeListing 
-GET 	/listings/retrieve			controllers.ListingController.retrieveListing
+POST 	/listings/update/:id		controllers.ListingController.update(id : Long) 
+DELETE	/listings/delete/:id		controllers.ListingController.delete(id : Long)
+GET 	/listings/read/:id			controllers.ListingController.read(id : Long)
+POST	/app/createListing			controllers.ListingController.create
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 # Following tutorial signup form
-POST    /app/signup                 controllers.Application.signup
+#POST    /app/signup                 controllers.Application.signup
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
