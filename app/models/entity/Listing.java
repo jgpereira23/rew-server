@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.avaje.ebean.Model;
+import models.payload.AddressVO;
 
 @Entity
 public class Listing extends Model {
@@ -53,7 +54,7 @@ public class Listing extends Model {
 	@Column(length = 11, nullable = false)
 	@NotNull
 	@Size(max = 11)
-	public int zip_code;
+	public String zip_code;
 	
 	@Column(columnDefinition = "TEXT")
 	@NotNull
@@ -117,5 +118,9 @@ public class Listing extends Model {
 	public static Listing findByID(Long id){
 		return find.byId(id);
 	}
-
+	
+	public static Listing findByAddress(AddressVO address){
+		//TODO: using the address find the listing
+		return find.where().eq("", "").findUnique();
+	}
 }
