@@ -120,7 +120,12 @@ public class Listing extends Model {
 	}
 	
 	public static Listing findByAddress(AddressVO address){
-		//TODO: using the address find the listing
-		return find.where().eq("", "").findUnique();
+		return find.where()
+				.eq("street_number", address.getStreetNum())
+				.and().eq("street_name", address.getStreetName())
+				.and().eq("street_type", address.getStreetType())
+				.and().eq("city", address.getCity())
+				.and().eq("state", address.getState())
+				.and().eq("zip_code", address.getZip()).findUnique();
 	}
 }
