@@ -1,8 +1,8 @@
 package models;
 
 public enum PropType {
-	HALF_DUPLEX("Half-duplex"),
-	RANCH("Ranch");
+	HALF_DUPLEX("half-duplex"),
+	RANCH("ranch");
 
     private final String name;       
 

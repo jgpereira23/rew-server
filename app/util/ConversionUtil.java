@@ -16,7 +16,7 @@ public class ConversionUtil {
     	address.setCity(listing.city);
     	address.setState(listing.state);
     	address.setStreetName(listing.street_name);
-    	address.setStreetNum(String.valueOf(listing.street_number));
+    	address.setStreetNum(listing.street_number);
     	address.setStreetType(listing.street_type);
     	address.setZip(String.valueOf(listing.zip_code));
     	
