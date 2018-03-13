@@ -1,8 +1,8 @@
-package models;
+package models.payload;
 
-public class Address {
+public class AddressVO {
 	
-	private String streetNum;
+	private int streetNum;
 	private String streetName;
 	private String streetType;
 	private String aptNum;
@@ -10,10 +10,10 @@ public class Address {
 	private	String state;
 	private String zip;
 	
-	public String getStreetNum() {
+	public int getStreetNum() {
 		return streetNum;
 	}
-	public void setStreetNum(String streetNum) {
+	public void setStreetNum(int streetNum) {
 		this.streetNum = streetNum;
 	}
 	public String getStreetName() {
