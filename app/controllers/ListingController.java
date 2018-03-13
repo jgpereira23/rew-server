@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.validation.Constraint;
 
-import controllers.Application.SignUp;
 import models.PropType;
 import models.SaleType;
 import models.entity.Listing;
@@ -47,7 +45,7 @@ public class ListingController extends Controller {
     	address.setStreetName("Olive");
     	address.setStreetNum(535);
     	address.setStreetType("Place");
-    	address.setZip(07095);
+    	address.setZip("07095");
     	//create listing object
     	listingVO.setAddress(address);
     	listingVO.setBasementFinished(true);
@@ -73,9 +71,32 @@ public class ListingController extends Controller {
     }
     
     public Result create() {
-    	Listing newlisting = formFactory.form(Listing.class).bindFromRequest().get();
-    	Listing existingListing = Listing.findByID(addressov);
-    	return ok("Success!");
+    	//create listing obj from the values of the form
+    	//Listing newlisting = formFactory.form(Listing.class).bindFromRequest().get();
+    	Form<Listing> listingForm = formFactory.form(Listing.class).bindFromRequest();
+    	/*
+    	if(listingForm.hasErrors()){
+    		return badRequest();
+    	}*/
+    	
+    	//grab values from new listing and save it to address vo
+    	/*
+    	AddressVO address = new AddressVO();
+    	address.setStreetName(newlisting.street_name);
+    	address.setStreetNum(newlisting.street_number);
+    	address.setStreetType(newlisting.street_type);
+    	address.setAptNum(newlisting.apt_number);
+    	address.setCity(newlisting.city);
+    	address.setState(newlisting.state);
+    	address.setZip(newlisting.zip_code);
+    	*/
+    	/*Listing existingListing = Listing.findByAddress(address);
+    	if(existingListing != null){
+    		
+    	}*/
+    	Listing newListing = listingForm.get();
+    	newListing.save();
+    	return ok("Listing Saved!");
     }
     
     public Result delete(Long id) {

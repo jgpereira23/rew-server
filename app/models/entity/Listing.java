@@ -28,17 +28,15 @@ public class Listing extends Model {
 	
 	@Column(length = 11, nullable = false)
 	@NotNull
-	@Size(max = 11)
 	public int street_number;
 	
 	@Column(length = 2, nullable = false)
 	@NotNull
-	@Size(max = 2)
+	@Size(max = 5)
 	public String street_type;
 	
 	@Column(length = 15, nullable = false)
 	@NotNull
-	@Size(max = 15)
 	public String apt_number;
 	
 	@Column(length = 100, nullable = false)
@@ -53,31 +51,26 @@ public class Listing extends Model {
 	
 	@Column(length = 11, nullable = false)
 	@NotNull
-	@Size(max = 11)
 	public String zip_code;
 	
 	@Column(columnDefinition = "TEXT")
 	@NotNull
 	public String description;
 
-	@Column(length = 11, nullable = false)
+	@Column(nullable = false)
 	@NotNull
-	@Size(max = 11)
 	public double bedrooms;
 	
-	@Column(length = 11, nullable = false)
+	@Column(nullable = false)
 	@NotNull
-	@Size(max = 11)
 	public double bathrooms;
 	
 	@Column(length = 11, nullable = false)
 	@NotNull
-	@Size(max = 11)
 	public int home_square_feet;
 	
-	@Column(length = 11, nullable = false)
+	@Column(length = 11,nullable = false)
 	@NotNull
-	@Size(max = 11)
 	public int land_square_feet;
 	
 	@Column(length = 100, nullable = false)
@@ -87,12 +80,10 @@ public class Listing extends Model {
 	
 	@Column(length = 11, nullable = false)
 	@NotNull
-	@Size(max = 11)
 	public int year_built;
 	
-	@Column(length = 20, nullable = false)
+	@Column(nullable = false)
 	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
 	public String market_date;
 	
 	@Column(length = 100, nullable = false)
@@ -102,9 +93,8 @@ public class Listing extends Model {
 	
 	public boolean finished_basement;
 	
-	@Column(length = 20, nullable = false)
+	@Column(nullable = false)
 	@NotNull
-	@Size(max = 20)
 	public double price;
 	
 	public boolean is_active;
