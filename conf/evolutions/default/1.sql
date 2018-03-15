@@ -19,11 +19,13 @@ create table listing (
   land_square_feet              integer(11) not null,
   sale_type                     varchar(100) not null,
   year_built                    integer(11) not null,
-  market_date                   varchar(255) not null,
+  market_date                   datetime(6) not null,
   property_type                 varchar(100) not null,
   finished_basement             tinyint(1) default 0,
   price                         double not null,
   is_active                     tinyint(1) default 0,
+  created_at                    datetime(6) not null,
+  updated_at                    datetime(6) not null,
   constraint pk_listing primary key (id)
 );
 
