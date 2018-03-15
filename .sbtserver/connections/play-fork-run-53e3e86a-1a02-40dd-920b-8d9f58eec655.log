@@ -1,0 +1,27 @@
+New log file opened at Mon Mar 12 21:07:53 EDT 2018 by 4856@Iguana
+Sending msg to client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\master.log))
+Sending msg to client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\connections\play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655: (3,ReceivedResponse())
+Got request: UnlistenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655: (4,ReceivedResponse())
+Got request: ListenToValue(AttributeKey[play.forkrun.protocol.ForkConfig]("playForkConfig") in Scope(Build: file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/, , Project: ProjectReference(file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/,myProject)))
+Reading next message from client.
+Got request: UnlistenToValue(AttributeKey[play.forkrun.protocol.ForkConfig]("playForkConfig") in Scope(Build: file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/, , Project: ProjectReference(file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/,myProject)))
+Reading next message from client.
+Got request: ListenToValue(AttributeKey[play.runsupport.Reloader$CompileResult]("playForkReload") in Scope(Build: file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/, , Project: ProjectReference(file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/,myProject)))
+Reading next message from client.
+Got request: UnlistenToValue(AttributeKey[play.runsupport.Reloader$CompileResult]("playForkReload") in Scope(Build: file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/, , Project: ProjectReference(file:/C:/Users/Jose/OneDrive/Documents/REW/rew/server/,myProject)))
+Reading next message from client.
+Client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655 closed, java.net.SocketException: Software caused connection abort: recv failed, shutting down
+Stopping client.
+Client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655 thread exiting.
+Dropping message (5,ReceivedResponse()) to dead client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655
+Dropping message (6,ReceivedResponse()) to dead client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655
+Dropping message (7,ReceivedResponse()) to dead client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655
+Dropping message (8,ReceivedResponse()) to dead client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-53e3e86a-1a02-40dd-920b-8d9f58eec655

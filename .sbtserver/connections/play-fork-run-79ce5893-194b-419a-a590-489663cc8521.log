@@ -1,0 +1,12 @@
+New log file opened at Sat Mar 10 01:37:55 EST 2018 by 4856@Iguana
+Sending msg to client play-fork-run-79ce5893-194b-419a-a590-489663cc8521: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-79ce5893-194b-419a-a590-489663cc8521: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\master.log))
+Sending msg to client play-fork-run-79ce5893-194b-419a-a590-489663cc8521: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\connections\play-fork-run-79ce5893-194b-419a-a590-489663cc8521.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-79ce5893-194b-419a-a590-489663cc8521: (3,ReceivedResponse())
+Client play-fork-run-79ce5893-194b-419a-a590-489663cc8521 closed, java.net.SocketException: Software caused connection abort: recv failed, shutting down
+Stopping client.
+Client play-fork-run-79ce5893-194b-419a-a590-489663cc8521 thread exiting.
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-79ce5893-194b-419a-a590-489663cc8521
