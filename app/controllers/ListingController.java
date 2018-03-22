@@ -72,29 +72,27 @@ public class ListingController extends Controller {
     
     public Result create() {
     	//create listing obj from the values of the form
-    	//Listing newlisting = formFactory.form(Listing.class).bindFromRequest().get();
     	Form<Listing> listingForm = formFactory.form(Listing.class).bindFromRequest();
-    	/*
     	if(listingForm.hasErrors()){
-    		return badRequest();
-    	}*/
+    		return badRequest("Form has Errors");
+    	}
+    	Listing newListing = listingForm.get();
     	
     	//grab values from new listing and save it to address vo
-    	/*
     	AddressVO address = new AddressVO();
-    	address.setStreetName(newlisting.street_name);
-    	address.setStreetNum(newlisting.street_number);
-    	address.setStreetType(newlisting.street_type);
-    	address.setAptNum(newlisting.apt_number);
-    	address.setCity(newlisting.city);
-    	address.setState(newlisting.state);
-    	address.setZip(newlisting.zip_code);
-    	*/
-    	/*Listing existingListing = Listing.findByAddress(address);
+    	address.setStreetName(newListing.street_name);
+    	address.setStreetNum(newListing.street_number);
+    	address.setStreetType(newListing.street_type);
+    	address.setAptNum(newListing.apt_number);
+    	address.setCity(newListing.city);
+    	address.setState(newListing.state);
+    	address.setZip(newListing.zip_code);
+    	
+    	Listing existingListing = Listing.findByAddress(address);
     	if(existingListing != null){
-    		
-    	}*/
-    	Listing newListing = listingForm.get();
+    		return badRequest("This Listing already exists");
+    	}   
+    	
     	newListing.save();
     	return ok("Listing Saved!");
     }

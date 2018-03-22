@@ -1,5 +1,6 @@
 package models.entity;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -12,6 +13,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.avaje.ebean.Model;
+import com.avaje.ebean.annotation.CreatedTimestamp;
+import com.avaje.ebean.annotation.UpdatedTimestamp;
+
 import models.payload.AddressVO;
 
 @Entity
@@ -20,6 +24,14 @@ public class Listing extends Model {
 	@Id
 	@GeneratedValue
 	public Long id;
+	
+	@Column(name="created_at", updatable = false)
+	@CreatedTimestamp
+	public Date createdAt;
+	
+	@Column(name = "updated_at")
+	@UpdatedTimestamp
+	public Date updatedAt;
 
 	@Column(length = 500, nullable = false)
 	@NotNull
@@ -84,6 +96,7 @@ public class Listing extends Model {
 	
 	@Column(nullable = false)
 	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
 	public String market_date;
 	
 	@Column(length = 100, nullable = false)
