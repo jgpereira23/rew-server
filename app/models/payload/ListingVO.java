@@ -11,11 +11,12 @@ public class ListingVO {
 	private int landSqFt;
 	private double bathrooms;
 	private int homeSqFt;
-	private SaleType saleType;
+	private String saleType;
 	private int yrBuilt;
 	private String marketDuration;
+	private String marketDate;
 	private boolean basementFinished;
-	private PropType propType;
+	private String propType;
 	
 	public AddressVO getAddress() {
 		return address;
@@ -53,10 +54,10 @@ public class ListingVO {
 	public void setHomeSqFt(int homeSqFt) {
 		this.homeSqFt = homeSqFt;
 	}
-	public SaleType getSaleType() {
+	public String getSaleType() {
 		return saleType;
 	}
-	public void setSaleType(SaleType saleType) {
+	public void setSaleType(String saleType) {
 		this.saleType = saleType;
 	}
 	public int getYrBuilt() {
@@ -71,16 +72,22 @@ public class ListingVO {
 	public void setMarketDuration(String marketDuration) {
 		this.marketDuration = marketDuration;
 	}
+	public String getMarketDate() {
+		return marketDate;
+	}
+	public void setMarketDate(String marketDate) {
+		this.marketDate = marketDate;
+	}
 	public boolean isBasementFinished() {
 		return basementFinished;
 	}
 	public void setBasementFinished(boolean basementFinished) {
 		this.basementFinished = basementFinished;
 	}
-	public PropType getPropType() {
+	public String getPropType() {
 		return propType;
 	}
-	public void setPropType(PropType propType) {
+	public void setPropType(String propType) {
 		this.propType = propType;
 	}
 }
