@@ -35,36 +35,13 @@ public class ListingController extends Controller {
      */
     public Result retrieveActiveListings() {
     	ActiveListingsResponseVO activeListingsResponse = new  ActiveListingsResponseVO();
-    	List<ListingVO> listingsVO = new ArrayList<ListingVO>();
-    	ListingVO listingVO = new ListingVO();
-    	//configure address obj
-    	AddressVO address = new AddressVO();
-    	address.setAptNum("5A");
-    	address.setCity("Woodbridge");
-    	address.setState("NJ");
-    	address.setStreetName("Olive");
-    	address.setStreetNum(535);
-    	address.setStreetType("Place");
-    	address.setZip("07095");
-    	//create listing object
-    	listingVO.setAddress(address);
-    	listingVO.setBasementFinished(true);
-    	listingVO.setBathrooms(2.0);
-    	listingVO.setBedrooms(2);
-    	listingVO.setHomeSqFt(3250);
-    	listingVO.setLandSqFt(4500);
-    	listingVO.setMarketDuration("3 months");
-    	listingVO.setPrice(200000.00);
-    	listingVO.setPropType(PropType.HALF_DUPLEX);
-    	listingVO.setSaleType(SaleType.BY_OWNER);
-    	listingVO.setYrBuilt(1953);
+    	List<ListingVO> listingsVO = new ArrayList<>();
     	//request for active listings and save to a list
     	List<Listing> listings = Listing.findAllActiveListings();
     	//iterate thru list and add it to our listingsVO list
     	for(Listing listing : listings){
         	listingsVO.add(ConversionUtil.toListingVO(listing) );
     	}
-    	
 		activeListingsResponse.setListings(listingsVO );
     	
 	    return ok(Json.toJson(activeListingsResponse));

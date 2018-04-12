@@ -1,0 +1,12 @@
+New log file opened at Mon Mar 12 21:07:34 EDT 2018 by 4856@Iguana
+Sending msg to client play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\master.log))
+Sending msg to client play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Users\Jose\OneDrive\Documents\REW\rew\server\.sbtserver\connections\play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95: (3,ReceivedResponse())
+Client play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95 closed, java.net.SocketException: Software caused connection abort: recv failed, shutting down
+Stopping client.
+Client play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95 thread exiting.
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-b6669220-2d99-4f23-9223-d0ff3fa41b95
